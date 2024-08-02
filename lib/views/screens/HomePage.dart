@@ -12,8 +12,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
 
-
-
     return Scaffold(
       body: Stack(
         children: [
@@ -25,31 +23,23 @@ class HomePage extends StatelessWidget {
                 image: AssetImage(
                   ImageUtils.ImagePath + ImageUtils.AppBG,
                 ),
-                fit: BoxFit.fitWidth,
+                fit: BoxFit.cover,
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(
-              h * 0.02,
-            ),
+            padding: EdgeInsets.all(h * 0.02),
             child: Column(
               children: [
-                SizedBox(
-                  height: h * 0.05,
-                ),
+                SizedBox(height: h * 0.05),
                 AppBarWidget(
                   iconPath: ImageUtils.ImagePath + ImageUtils.MenuIcon,
                   onTap: () {},
                   title: AppUtils.AppName,
                 ),
-                SizedBox(
-                  height: h * 0.18,
-                ),
-                Expanded(
-                  child: SocialMediaGrid(
-                    socialMediaList: socialMediaList,
-                  ),
+                SizedBox(height: h * 0.18),
+                SocialMediaGrid(
+                  socialMediaList: socialMediaList,
                 ),
               ],
             ),

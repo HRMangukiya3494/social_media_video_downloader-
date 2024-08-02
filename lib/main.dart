@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.HOME,
+      initialRoute: AppRoutes.BOTTOMNAVIIGATION,
       getPages: AppRoutes.routes,
     );
   }
